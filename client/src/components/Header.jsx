@@ -66,6 +66,7 @@ export default function Header() {
       {mobileMenuIsOpen && (
         <nav className="md:hidden p-8 absolute top-full left-0 bg-yellow-50 w-full">
           <Link
+            onClick={() => setMobileMenuIsOpen(false)}
             to="/"
             className={`flex gap-2 items-center px-3 py-2 rounded-md transition
           hover:bg-yellow-500 hover:text-black
@@ -76,6 +77,7 @@ export default function Header() {
           </Link>
 
           <Link
+            onClick={() => setMobileMenuIsOpen(false)}
             to="/catalog"
             className={`flex gap-2 items-center px-3 py-2 rounded-md transition
           hover:bg-yellow-500 hover:text-black
