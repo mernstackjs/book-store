@@ -29,7 +29,11 @@ export default function Header() {
 
   return (
     <header className="bg-yellow-50 p-4 md:px-18 md:py-4 flex justify-between items-center relative">
-      <Link to="/" className="flex gap-2 justify-center items-center">
+      <Link
+        onClick={() => setMobileMenuIsOpen(false)}
+        to="/"
+        className="flex gap-2 justify-center items-center"
+      >
         <BookOpen
           className="bg-yellow-500 p-2 rounded-2xl"
           color="white"
