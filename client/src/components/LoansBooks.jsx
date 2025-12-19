@@ -11,7 +11,7 @@ export default function LoansBooks() {
         />
         <span>Active Loans</span>
       </div>
-      <div className="border border-gray-200 mt-4 rounded-lg p-4 flex justify-between items-center">
+      <div className="border border-gray-200 mt-4 rounded-lg p-4 md:flex justify-between items-center">
         <div className="flex gap-2.5">
           <img
             className="w-20 h-20"
@@ -22,7 +22,7 @@ export default function LoansBooks() {
             <p>Book Title</p>
             <p>Book author</p>
 
-            <div className="flex gap-2">
+            <div className="md:flex gap-2">
               <span className="flex gap-2">
                 <Calendar size={20} /> Borrowed: 1/10/2024
               </span>
