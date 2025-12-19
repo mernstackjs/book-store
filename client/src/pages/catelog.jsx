@@ -1,33 +1,39 @@
 import axios from "axios";
-import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 
 export default function Catelog() {
-  const [message, setMessage] = useState(() => {
-    const respMessage = localStorage.getItem("message");
-    return respMessage ? JSON.parse(respMessage) : "";
-  });
-  const testApiCall = async () => {
-    const response = await axios.get(
-      `${import.meta.env.VITE_API_URL}/api/health`
-    );
-    localStorage.setItem("message", JSON.stringify(response.data.message));
-  };
+  const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    const fetTestApi = async () => {
+      setLoading(true);
+      const response = await axios.get(
+        `${import.meta.env.VITE_API_URL}/api/health`
+      );
+      setMessage(response?.data);
+      setLoading(false);
+    };
+
+    fetTestApi();
+  }, []);
+
+  console.log();
+
   return (
     <div>
       <h1>Book Catalog</h1>
       <p>Browse our collection of [] books</p>
 
-      <button
-        onClick={testApiCall}
-        className="text-white bg-amber-900 p-3 rounded-md my-5"
-      >
-        Test Api Call
-      </button>
-
-      <p className="px-12  text-2xl font-extrabold italic">
-        {message ? message : "No message"}
-      </p>
+      {!loading ? (
+        <p className="text-white py-8 m-4 text-2xl font-extrabold bg-amber-800 p-4">
+          {message.message}
+        </p>
+      ) : (
+        <p className="text-white py-8 m-4 text-2xl font-extrabold bg-amber-800 p-4">
+          Loading ......
+        </p>
+      )}
     </div>
   );
 }
