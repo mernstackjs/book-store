@@ -5,19 +5,18 @@ import { books } from "../components/index/featureOf4books";
 
 export default function BookDetails() {
   const { bookId } = useParams();
-  console.log(bookId);
   const book = books.find((book) => book.id == bookId);
-  console.log(book);
+
   return (
-    <div className="bg-yellow-50 min-h-screen flex flex-col justify-center px-18">
-      <Link className="flex mb-4  items-center gap-2" to="/catalog">
+    <div className="bg-yellow-50 min-h-screen flex flex-col justify-center md:px-18 px-2">
+      <Link className="flex my-4  items-center gap-2" to="/catalog">
         <ArrowLeft size={18} /> Back to catelog
       </Link>
 
-      <div className="flex gap-3">
+      <div className="md:flex gap-3">
         <img className="border h-150" src={book?.image} alt={book?.title} />
         <div className="flex flex-col flex-1">
-          <div className="flex gap-5 mb-3">
+          <div className="flex gap-5 my-3">
             <span className="border rounded-2xl  border-gray-200 px-4 py-1 font-medium">
               {book.category}
             </span>
@@ -31,7 +30,7 @@ export default function BookDetails() {
             <Star color="#d29641" /> {book.rating}{" "}
             <span className="text-gray-400 text-sm">/ 5</span>
           </span>
-          <div className="border flex gap-2 justify-around items-center my-5 border-gray-200 bg-white rounded-xl w-full p-6">
+          <div className="border md:flex flex flex-col gap-4 items-start  my-5 border-gray-200 bg-white rounded-xl w-full p-6">
             <div className="flex gap-2 items-center justify-center">
               <Calendar
                 size={40}
@@ -70,7 +69,7 @@ export default function BookDetails() {
                 amet.
               </p>
             </div>
-            <button className="bg-amber-500 cursor-pointer mt-8 inline-flex items-center gap-2 rounded-md px-6 py-3 font-bold text-white hover:bg-amber-600 transition">
+            <button className="bg-amber-500 ml-12 cursor-pointer my-8 inline-flex items-center gap-2 rounded-md px-6 py-3 font-bold text-white hover:bg-amber-600 transition">
               <BookOpen /> Loan This Book
             </button>
           </div>
