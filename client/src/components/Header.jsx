@@ -28,7 +28,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-yellow-50 p-4 md:px-18 md:py-4 flex justify-between items-center relative">
+    <header className="bg-yellow-50 border-b border-gray-200 p-4 md:px-18 md:py-4 flex justify-between items-center relative">
       <Link
         onClick={() => setMobileMenuIsOpen(false)}
         to="/"
@@ -105,8 +105,8 @@ export default function Header() {
           <div className="flex justify-center items-center border-b border-gray-200  gap-2 px-2 py-4">
             <CircleUserRound />
             <div className="flex   flex-col gap-1">
-              <span className="text-sm">John Doe</span>
-              <span className="text-sm">john.doe@example.com</span>
+              <span className="text-sm">Ahmed</span>
+              <span className="text-sm">ahmed@example.com</span>
             </div>
           </div>
 
