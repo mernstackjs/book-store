@@ -4,13 +4,13 @@ export const app = express();
 
 app.use(
   cors({
-    origin: "https://ahmed-book-store.netlify.app",
+    origin: ["https://ahmed-book-store.netlify.app", "http://localhost:5173"],
   })
 );
 
 app.get("/api/health", (req, res) => {
   res.status(200).json({
-    message: "your server health is OKi",
+    message: "Your server health is OKi",
   });
 });
 
