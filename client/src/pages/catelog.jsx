@@ -8,7 +8,9 @@ export default function Catelog() {
     return respMessage ? JSON.parse(respMessage) : "";
   });
   const testApiCall = async () => {
-    const response = await axios.get("http://localhost:5059/api/health");
+    const response = await axios.get(
+      `${import.meta.env.VITE_API_URL}/api/health`
+    );
     localStorage.setItem("message", JSON.stringify(response.data.message));
   };
   return (
