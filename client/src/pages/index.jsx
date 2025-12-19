@@ -6,7 +6,7 @@ export default function Index() {
   return (
     <div>
       <Hero />
-      <div className="md:flex gap-2 justify-around items-center my-2 py-8">
+      <div className="md:flex gap-2 justify-around items-center my-2 pt-8">
         <div className="flex flex-col gap-2 items-center">
           <BookOpen
             size={40}
