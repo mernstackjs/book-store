@@ -11,8 +11,8 @@ import LoanHistoryBook from "../components/LoanHistoryBook";
 
 export default function Profile() {
   return (
-    <div className="min-h-screen  flex flex-col items-center justify-center ">
-      <div className="w-full max-w-4xl bg-white rounded-2xl shadow-md overflow-hidden">
+    <div className="min-h-screen p-4  flex flex-col items-center justify-center ">
+      <div className="w-full  md:max-w-4xl bg-white rounded-2xl shadow-md overflow-hidden">
         <div className="h-40 bg-linear-to-r from-slate-900 to-slate-700 relative">
           <div className="absolute -bottom-14 left-8">
             <img
@@ -42,7 +42,7 @@ export default function Profile() {
         </div>
       </div>
 
-      <div className="flex gap-3 mt-8 w-full max-w-4xl">
+      <div className="grid md:grid-cols-3 gap-3 mt-8 w-full max-w-4xl">
         <div className="w-full border border-gray-200 p-4 rounded-2xl flex gap-3 items-center">
           <BookOpen
             size={40}
