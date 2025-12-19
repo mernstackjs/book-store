@@ -68,7 +68,7 @@ export default function Header() {
 
       {/* Mobile View Navbar */}
       {mobileMenuIsOpen && (
-        <nav className="md:hidden p-8 absolute top-full left-0 bg-yellow-50 w-full">
+        <nav className="md:hidden z-50 p-8 absolute top-full left-0 bg-yellow-50 w-full">
           <Link
             onClick={() => setMobileMenuIsOpen(false)}
             to="/"
