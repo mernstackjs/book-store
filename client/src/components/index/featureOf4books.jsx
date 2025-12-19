@@ -1,50 +1,48 @@
 import { ArrowRight, BookOpen, Star } from "lucide-react";
 import React from "react";
 import { Link } from "react-router";
-
+export const books = [
+  {
+    id: 1,
+    title: "The Great Gatsby",
+    author: "F. Scott Fitzgerald",
+    rating: 4.5,
+    available: 3,
+    category: "Classic",
+    image:
+      "https://skyhorse-us.imgix.net/covers/9781949846386.jpg?auto=format&w=298",
+  },
+  {
+    id: 2,
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    rating: 4.8,
+    available: 2,
+    category: "Classic",
+    image:
+      "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+  },
+  {
+    id: 3,
+    title: "1984",
+    author: "George Orwell",
+    rating: 4.7,
+    available: 4,
+    category: "Dystopian",
+    image: "https://i.ebayimg.com/images/g/u6wAAOSwwX1hN7xf/s-l1200.jpg",
+  },
+  {
+    id: 4,
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    rating: 4.6,
+    available: 1,
+    category: "Romance",
+    image:
+      "https://goldenglobes.com/wp-content/uploads/2023/10/pride-prejudice.jpg",
+  },
+];
 export default function FeatureOf4books() {
-  const books = [
-    {
-      id: 1,
-      title: "The Great Gatsby",
-      author: "F. Scott Fitzgerald",
-      rating: 4.5,
-      available: 3,
-      category: "Classic",
-      image:
-        "https://skyhorse-us.imgix.net/covers/9781949846386.jpg?auto=format&w=298",
-    },
-    {
-      id: 2,
-      title: "To Kill a Mockingbird",
-      author: "Harper Lee",
-      rating: 4.8,
-      available: 2,
-      category: "Classic",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
-    },
-    {
-      id: 3,
-      title: "1984",
-      author: "George Orwell",
-      rating: 4.7,
-      available: 4,
-      category: "Dystopian",
-      image: "https://i.ebayimg.com/images/g/u6wAAOSwwX1hN7xf/s-l1200.jpg",
-    },
-    {
-      id: 4,
-      title: "Pride and Prejudice",
-      author: "Jane Austen",
-      rating: 4.6,
-      available: 1,
-      category: "Romance",
-      image:
-        "https://goldenglobes.com/wp-content/uploads/2023/10/pride-prejudice.jpg",
-    },
-  ];
-
   return (
     <div className="bg-yellow-50 md:p-18 p-4">
       <div className="flex justify-between items-center">
@@ -63,7 +61,7 @@ export default function FeatureOf4books() {
       </div>
       <div className="grid mt-8 h-164 gap-4 md:grid-cols-4">
         {books?.map((book) => (
-          <div className="shadow-2xl bg-white group rounded-xl">
+          <div key={book.id} className="shadow-2xl bg-white group rounded-xl">
             <div className=" relative">
               <img
                 className="h-140 rounded-t-xl object-cover w-full"
