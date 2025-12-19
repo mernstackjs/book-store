@@ -101,7 +101,7 @@ export default function Header() {
       </div>
 
       {openProfile && (
-        <div className="border  z-50 border-gray-200 absolute top-full right-4 md:right-18 rounded-md">
+        <div className="border p-2 shadow-2xl bg-white z-50 border-gray-200 absolute top-full right-4 md:right-18 rounded-md">
           <div className="flex justify-center items-center border-b border-gray-200  gap-2 px-2 py-4">
             <CircleUserRound />
             <div className="flex   flex-col gap-1">
@@ -115,11 +115,13 @@ export default function Header() {
             className="border-b cursor-pointer border-gray-200 flex gap-2 px-2 py-1 hover:bg-yellow-500 hover:rounded-2xl "
           >
             <UserRoundPen />
-            <Link to="/profile">Profile</Link>
+            <Link className="text-sm" to="/profile">
+              Profile
+            </Link>
           </div>
           <div className=" flex cursor-pointer  text-red-600 gap-2 px-2 py-1  hover:bg-yellow-500 hover:rounded-2xl">
             <LogOut />
-            <button>Logout</button>
+            <button className="text-sm">Logout</button>
           </div>
         </div>
       )}
