@@ -5,6 +5,7 @@ import Index from "./pages";
 import NotFound from "./pages/notFound";
 import Profile from "./pages/profile";
 import Catelog from "./pages/catelog";
+import BookDetails from "./pages/bookDetails";
 
 export default function App() {
   return (
@@ -15,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Index />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/catalog" element={<Catelog />} />
+        <Route path="/book/:bookId" element={<BookDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
