@@ -9,7 +9,7 @@ export default function LoansBooks() {
           size={40}
           className="bg-yellow-100 rounded-2xl text-yellow-600 p-2"
         />
-        <span>Active Loans</span>
+        <span className="text-2xl font-bold">Active Loans</span>
       </div>
       <div className="border border-gray-200 mt-4 rounded-lg p-4 md:flex justify-between items-center">
         <div className="flex gap-2.5">
